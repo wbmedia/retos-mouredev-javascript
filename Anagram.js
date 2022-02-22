@@ -27,9 +27,6 @@ const buildCharMap = function (str) {
   }
   return charMap
 }
-console.log(Anagram('listen', 'silent'))
-console.log(Anagram('hey bob', 'yei bob'))
-
 // Solution 2
 const isAnagram = function (word1, word2) {
   // comparamos si los strings son iguales
@@ -40,5 +37,6 @@ const cleanString = function (str) {
   // limpiamos nuestro string
   return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
 }
-console.log(isAnagram('listen', 'silent'))
-console.log(isAnagram('hey bob', 'yei bob'))
+
+module.exports = isAnagram
+module.exports = Anagram
