@@ -1,0 +1,41 @@
+// Solution 1
+const Anagram = function (word1, word2) {
+  const word1Map = buildCharMap(word1)
+  const word2Map = buildCharMap(word2)
+
+  // si la longitud de los dos mapas es diferente, no son anagramas
+  if (Object.keys(word1Map).length !== Object.keys(word2Map).length) {
+    return false
+  }
+
+  for (let char in word1Map) {
+    if (word1Map[char] !== word2Map[char]) {
+      return false
+    }
+  }
+  return true
+}
+
+// helper function to sort the letters of a word
+const buildCharMap = function (str) {
+  // hash table
+  const charMap = {}
+  // limpiamos nuestro string
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    charMap[char] = charMap[char] + 1 || 1
+  }
+  return charMap
+}
+console.log(Anagram('listen', 'silent'))
+console.log(Anagram('hey bob', 'yei bob'))
+
+// Solution 2
+const isAnagram = function (word1, word2) {
+  return cleanString(word1) === cleanString(word2)
+}
+
+const cleanString = function (str) {
+  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
+}
+console.log(isAnagram('listen', 'silent'))
+console.log(isAnagram('hey bob', 'yei bob'))
