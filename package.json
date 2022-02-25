@@ -19,5 +19,8 @@
   "homepage": "https://github.com/wbmedia/retos-mouredev-javascript#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "quokka": {
+    "babel": true
   }
 }

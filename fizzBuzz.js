@@ -1,20 +1,13 @@
-
-const fizzBuzz = function (n: number) {
-  for (let i = 1; i < n; i++) {
-    if (i % 15 == 0) {
-      console.log('fizzBuz');
-    } else if (i % 3 == 0) {
-      console.log('fizz');
-    } else if (i % 5 == 0) {
-      console.log('buzz');
-    } else {
-      console.log(i);
-    }
+const fizzBuzz = function (n) {
+  if (n % 15 === 0) {
+    return 'fizzBuzz'
+  } else if (n % 3 === 0) {
+    return 'fizz'
+  } else if (n % 5 === 0) {
+    return 'buzz'
+  } else {
+    return n
   }
+}
 
-  return n;
-};
-
-fizzBuzz(99);
-fizzBuzz(100);
-fizzBuzz(1);
+module.exports = fizzBuzz

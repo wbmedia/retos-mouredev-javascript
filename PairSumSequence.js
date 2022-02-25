@@ -1,7 +1,7 @@
 /* 
 	Calcualar el numero al cuadrado
 	Creamos una funcion para recibir un parametro n
-  Conplejidad: O(1)
+  Complejidad: O(n) por que recorre todos los numeros
 */
 const pairSumSequence = function (n) {
   let sum = 0
@@ -12,6 +12,7 @@ const pairSumSequence = function (n) {
 }
 
 // Helper function
+// Complejidad O(1) constante
 const pairSum = function (a, b) {
   return a + b
 }
