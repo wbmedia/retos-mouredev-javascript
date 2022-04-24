@@ -1,5 +1,5 @@
 const fizzBuzz = require('../fizzBuzz')
-test('fizzBuzz Test', () => {
+test('fizzBuzz Algorithm', () => {
   expect(fizzBuzz(15)).toBe('fizzBuzz')
   expect(fizzBuzz(3)).toBe('fizz')
   expect(fizzBuzz(5)).toBe('buzz')

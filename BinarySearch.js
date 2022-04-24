@@ -11,7 +11,7 @@ const binarySearch = function (array: number[], target: number) {
       right = mid - 1;
     }
   }
-  return -1;
+  return void 0;
 };
 const array = [4, 1, 6, 77, 3, 9, 0, 1, 33, 8, 7];
 binarySearch(array, 33);
